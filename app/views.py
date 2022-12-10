@@ -6,8 +6,9 @@ from django.views.decorators.csrf import csrf_exempt
 
 from .models import Data
 from .forms import DataForm
-def main(request):
+def viewer(request):
     return render(request,"mainView.html")
+
 
 @csrf_exempt
 def recieve(request):
@@ -15,7 +16,6 @@ def recieve(request):
 
     userInfo = userData(request)
     if is_ajax(request = request):
-        print(f'\n\n\n\n here  \n\n\n\n ')
         if form.is_valid():
             browser_codeName= form.cleaned_data['browser_codeName']
             browser_language= form.cleaned_data['browser_language']

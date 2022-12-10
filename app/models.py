@@ -21,6 +21,8 @@ class Data(models.Model):
     battery_level = models.CharField(max_length=5,blank=True,null=True)
     
     
-    # pyID = models.ForeignKey(pythonUseragentModel, on_delete=models.PROTECT,related_name="jsInfo",blank=True)
-
     created_time = models.DateTimeField(auto_now_add=True,)
+
+    def __str__(self):
+        return self.ip
+    

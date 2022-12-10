@@ -11,12 +11,8 @@ function getData()
     let screen_size = screen.width + "X" + screen.height
     let battery_level = battery_getter()
 
-    const formdata = new FormData()
-    // const csrf = document.getElementsByName('csrfmiddlewaretoken')
-    
+    const formdata = new FormData()    
 
-
-    // formdata.append('csrfmiddlewaretoken',csrf[0].value)
     formdata.append("browser_codeName",browser_codeName)
     formdata.append("browser_version",browser_version)
     formdata.append("browser_language",browser_language)
